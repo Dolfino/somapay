@@ -26,6 +26,8 @@ export interface DataLayerEvent {
     page_location?: string;
     content_group1?: string;
     custom_parameters?: Record<string, any>;
+    user_id?: string; // Adicionada propriedade user_id
+    user_properties?: Record<string, any>; // Adicionada propriedade user_properties
 }
 
 // Configuração do GTM
