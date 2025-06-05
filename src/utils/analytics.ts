@@ -32,10 +32,10 @@ export interface DataLayerEvent {
 
 // Configuração do GTM
 export const GTM_CONFIG = {
-    containerId: 'GTM-XXXXXXX',
-    serverContainerUrl: 'https://sst.somapay.com.br',
-    auth: 'your-auth-token',
-    preview: 'env-preview-token'
+    containerId: process.env.NEXT_PUBLIC_GTM_ID || 'GTM-PMMV4PCB',
+    serverContainerUrl: process.env.NEXT_PUBLIC_GTM_SERVER_URL || 'https://sst.somapay.com.br',
+    auth: process.env.NEXT_PUBLIC_GTM_AUTH || '',
+    preview: process.env.NEXT_PUBLIC_GTM_PREVIEW || ''
 };
 
 // Configuração do Facebook Pixel
