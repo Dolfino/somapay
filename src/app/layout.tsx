@@ -1,6 +1,7 @@
 import GTMScript from '@/components/analytics/GTMScript';
 import Header from '@/components/layout/Header';
 import CookieBanner from '@/components/ui/CookieBanner';
+import { GTM_CONFIG } from '@/utils/analytics';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
@@ -144,7 +145,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_CONFIG.containerId}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
