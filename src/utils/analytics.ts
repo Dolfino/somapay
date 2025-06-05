@@ -46,7 +46,7 @@ export const FACEBOOK_CONFIG = {
 
 // Configuração do GA4
 export const GA4_CONFIG = {
-    measurementId: 'G-XXXXXXXXXX'
+    measurementId: process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-B998Z5QTDC'
 };
 
 declare global {
