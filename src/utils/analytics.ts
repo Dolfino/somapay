@@ -49,6 +49,12 @@ export const GA4_CONFIG = {
     measurementId: process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-B998Z5QTDC'
 };
 
+// Configuração do Hotjar
+export const HOTJAR_CONFIG = {
+    siteId: Number(process.env.NEXT_PUBLIC_HOTJAR_SITE_ID) || 6429545,
+    version: Number(process.env.NEXT_PUBLIC_HOTJAR_VERSION) || 6
+};
+
 declare global {
     interface Window {
         dataLayer: any[];
