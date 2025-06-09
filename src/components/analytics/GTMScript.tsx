@@ -1,6 +1,7 @@
 "use client";
 
-import { FACEBOOK_CONFIG, GA4_CONFIG, GTM_CONFIG } from '@/utils/analytics';
+import { FACEBOOK_CONFIG, GA4_CONFIG, GTM_CONFIG, HOTJAR_CONFIG } from '@/utils/analytics';
+import Hotjar from '@hotjar/browser';
 import Script from 'next/script';
 import { useEffect } from 'react';
 
@@ -14,6 +15,11 @@ export default function GTMScript({ children }: GTMScriptProps) {
     const initializeAnalytics = () => {
       // Inicializar dataLayer
       window.dataLayer = window.dataLayer || [];
+
+      // Inicializar Hotjar se configurado
+      if (HOTJAR_CONFIG.siteId && HOTJAR_CONFIG.version) {
+        Hotjar.init(HOTJAR_CONFIG.siteId, HOTJAR_CONFIG.version);
+      }
 
       // Configurar gtag se ainda não existir
       if (!window.gtag) {

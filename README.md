@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Analytics and Hotjar
+
+The project integrates Google Tag Manager, Google Analytics, Facebook Pixel and
+[Hotjar](https://www.hotjar.com/). To enable Hotjar you must install the
+browser package and provide two environment variables:
+
+```bash
+npm install @hotjar/browser
+
+# example values
+NEXT_PUBLIC_HOTJAR_SITE_ID=6429545
+NEXT_PUBLIC_HOTJAR_VERSION=6
+```
+
+With these variables set, Hotjar will be initialized automatically when the
+application loads.
