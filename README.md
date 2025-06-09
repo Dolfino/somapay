@@ -38,12 +38,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Analytics and Hotjar
 
 The project integrates Google Tag Manager, Google Analytics, Facebook Pixel and
-[Hotjar](https://www.hotjar.com/). To enable Hotjar locally you must install the
+[Hotjar](https://www.hotjar.com/). To enable Hotjar you must install the
 browser package and provide two environment variables:
 
 ```bash
 npm install @hotjar/browser
 
+# example values
 NEXT_PUBLIC_HOTJAR_SITE_ID=6429545
 NEXT_PUBLIC_HOTJAR_VERSION=6
 ```

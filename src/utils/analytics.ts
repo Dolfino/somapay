@@ -51,8 +51,8 @@ export const GA4_CONFIG = {
 
 // Configuração do Hotjar
 export const HOTJAR_CONFIG = {
-    siteId: Number(process.env.NEXT_PUBLIC_HOTJAR_SITE_ID) || 6429545,
-    version: Number(process.env.NEXT_PUBLIC_HOTJAR_VERSION) || 6
+    siteId: Number(process.env.NEXT_PUBLIC_HOTJAR_SITE_ID),
+    version: Number(process.env.NEXT_PUBLIC_HOTJAR_VERSION)
 };
 
 declare global {

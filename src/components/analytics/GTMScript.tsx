@@ -16,8 +16,10 @@ export default function GTMScript({ children }: GTMScriptProps) {
       // Inicializar dataLayer
       window.dataLayer = window.dataLayer || [];
 
-      // Inicializar Hotjar
-      Hotjar.init(HOTJAR_CONFIG.siteId, HOTJAR_CONFIG.version);
+      // Inicializar Hotjar se configurado
+      if (HOTJAR_CONFIG.siteId && HOTJAR_CONFIG.version) {
+        Hotjar.init(HOTJAR_CONFIG.siteId, HOTJAR_CONFIG.version);
+      }
 
       // Configurar gtag se ainda não existir
       if (!window.gtag) {
