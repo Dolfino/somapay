@@ -40,7 +40,7 @@ export const GTM_CONFIG = {
 
 // Configuração do Facebook Pixel
 export const FACEBOOK_CONFIG = {
-    pixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '4124932584429097',
+    pixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '841309739955811',
     accessToken: process.env.FACEBOOK_CONVERSION_API_TOKEN || 'your-conversion-api-token'
 };
 
